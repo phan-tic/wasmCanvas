@@ -1,6 +1,6 @@
 #include "Udim2.h"
 
-Udim2::Udim2(float XScale, int XOffset, float YScale, int YOffset)
+Udim2::Udim2(float XScale, uint32_t XOffset, float YScale, uint32_t YOffset)
     : X(XScale, XOffset), Y(YScale, YOffset) {}
 
 Udim2::Udim2(Udim const &X, Udim const &Y) : X(X), Y(Y) {}
@@ -39,12 +39,12 @@ Udim2 Udim2::lerp(const Udim2 &other, float t) const
 
 // Getters ==================================================
 float Udim2::getXScale() const { return X.getScale(); }
-int Udim2::getXOffset() const { return X.getOffset(); }
+uint32_t Udim2::getXOffset() const { return X.getOffset(); }
 float Udim2::getYScale() const { return Y.getScale(); }
-int Udim2::getYOffset() const { return Y.getOffset(); }
+uint32_t Udim2::getYOffset() const { return Y.getOffset(); }
 
 // Setters ==================================================
 void Udim2::setXScale(float XScale) { X.setScale(XScale); }
-void Udim2::setXOffset(int XOffset) { X.setOffset(XOffset); }
+void Udim2::setXOffset(uint32_t XOffset) { X.setOffset(XOffset); }
 void Udim2::setYScale(float YScale) { Y.setScale(YScale); }
-void Udim2::setYOffset(int YOffset) { Y.setOffset(YOffset); }
+void Udim2::setYOffset(uint32_t YOffset) { Y.setOffset(YOffset); }

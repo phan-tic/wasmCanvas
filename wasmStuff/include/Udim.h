@@ -1,13 +1,13 @@
-#include <cstdint>
+#include <cstduint32_t>
 
 class Udim
 {
 private:
     float Scale = 0;
-    int16_t Offset = 0;
+    uint32_t16_t Offset = 0;
 
 public:
-    Udim(float scale, int16_t offset);
+    Udim(float scale, uint32_t16_t offset);
 
     Udim(const Udim &other) = default;
     Udim(Udim &&other) noexcept = default;
@@ -20,11 +20,11 @@ public:
     Udim operator+(const Udim &other) const;
     Udim operator-(const Udim &other) const;
 
-    //Getters =================================================
+    // Getters =================================================
     float getScale() const { return Scale; }
-    int getOffset() const { return Offset; }
+    uint32_t getOffset() const { return Offset; }
 
-    //Setters =================================================
+    // Setters =================================================
     void setScale(float scale) { Scale = scale; }
-    void setOffset(int offset) { Offset = offset; }
+    void setOffset(uint32_t offset) { Offset = offset; }
 };

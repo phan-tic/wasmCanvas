@@ -4,11 +4,11 @@ class Udim2
 {
 
 private:
-  Udim X {0,300};
-  Udim Y {0,300};
+  Udim X{0, 300};
+  Udim Y{0, 300};
 
 public:
-  Udim2(float XScale, int XOffset, float YScale, int YOffset);
+  Udim2(float XScale, uint32_t XOffset, float YScale, uint32_t YOffset);
   Udim2(Udim const &X, Udim const &Y);
 
   Udim2(Udim2 const &other) = default;
@@ -27,13 +27,13 @@ public:
 
   // Getters =================================================
   float getXScale() const;
-  int getXOffset() const;
+  uint32_t getXOffset() const;
   float getYScale() const;
-  int getYOffset() const;
+  uint32_t getYOffset() const;
 
   // Setters =================================================
   void setXScale(float XScale);
-  void setXOffset(int XOffset);
+  void setXOffset(uint32_t XOffset);
   void setYScale(float YScale);
-  void setYOffset(int YOffset);
+  void setYOffset(uint32_t YOffset);
 };

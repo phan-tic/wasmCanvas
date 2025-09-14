@@ -1,9 +1,7 @@
 #include "Color3.h"
-#include <cstduint8_t>
-#include <algorithm>
 
-Color3::Color3(uint8_t8_t r, uint8_t8_t g, uint8_t8_t b) 
-        : r(std::clamp(r,0,255)), g(std::clamp(g,0,255)), b(std::clamp(b,0,255)) {}
+Color3::Color3(int r, int g, int b)
+    : r(r), g(g), b(b) {}
 
 Color3 &Color3::operator=(Color3 const &other)
 {
@@ -16,19 +14,16 @@ Color3 &Color3::operator=(Color3 const &other)
     return *this;
 }
 
-// TO:DO Make sure to clamp color values between 0 and 255 in future
 Color3 Color3::operator+(Color3 const &other) const
 {
     return Color3(r + other.r, g + other.g, b + other.b);
 }
 
-// TO:DO Make sure to clamp color values between 0 and 255 in future
 Color3 Color3::operator-(Color3 const &other) const
 {
     return Color3(r - other.r, g - other.g, b - other.b);
 }
 
-// TO:DO Make sure to clamp color values between 0 and 255 in future
 Color3 Color3::operator*(float scalar) const
 {
     return Color3(r * scalar, g * scalar, b * scalar);
@@ -44,12 +39,11 @@ Color3 Color3::lerp(Color3 const &other, float t) const
 }
 
 // Getters =================================================
-uint8_t Color3::getR() const { return this->r; }
-uint8_t Color3::getG() const { return this->g; }
-uint8_t Color3::getB() const { return this->b; }
+int Color3::getR() const { return this->r; }
+int Color3::getG() const { return this->g; }
+int Color3::getB() const { return this->b; }
 
 // Setters =================================================
-// TO:DO Make sure to clamp color values between 0 and 255 in future
-void Color3::setR(uint8_t r) { this->r = std::clamp(r, 0, 255); }
-void Color3::setG(uint8_t g) { this->g = std::clamp(g, 0, 255); }
-void Color3::setB(uint8_t b) { this->b = std::clamp(b, 0, 255); }
+void Color3::setR(int r) { this->r = r; }
+void Color3::setG(int g) { this->g = g; }
+void Color3::setB(int b) { this->b = b; }

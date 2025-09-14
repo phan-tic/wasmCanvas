@@ -1,14 +1,12 @@
-#include <cstdint>
-
 class Color3
 {
 private:
-  uint8_t r = 0;
-  uint8_t g = 0;
-  uint8_t b = 0;
+  int r = 0;
+  int g = 0;
+  int b = 0;
 
 public:
-  Color3(uint8_t r, uint8_t g, uint8_t b);
+  Color3(int r, int g, int b);
 
   Color3(Color3 const &other) = default;
   Color3(Color3 &&other) noexcept = default;
@@ -27,12 +25,12 @@ public:
   Color3 lerp(Color3 const &other, float t) const;
 
   // Getters =================================================
-  uint8_t getR() const;
-  uint8_t getG() const;
-  uint8_t getB() const;
+  int getR() const;
+  int getG() const;
+  int getB() const;
 
   // Setters =================================================
-  void setR(uint8_t r);
-  void setG(uint8_t g);
-  void setB(uint8_t b);
+  void setR(int r);
+  void setG(int g);
+  void setB(int b);
 };

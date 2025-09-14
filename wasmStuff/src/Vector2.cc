@@ -60,6 +60,12 @@ Vector2 Vector2::min(int min) const
         (x < min) ? min : x,
         (y < min) ? min : y);
 }
+Vector2 Vector2::max(int max) const
+{
+    return Vector2(
+        (x > max) ? max : x,
+        (y > max) ? max : y);
+}
 
 // Getters =================================================
 int Vector2::getX() const { return this->x; };
